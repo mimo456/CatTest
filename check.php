@@ -6,7 +6,6 @@
     $question5=$_GET['question5'];
 
     $cnt=0;//正解数
-    $question5=false;//正解のboolean
 
     $correct = array_fill(0, 5, 'Ｘ');//初期値に✗を入れておく
 
@@ -34,7 +33,6 @@
         $cnt++;
         $correct[4]="◯";
     } 
-    print_r($correct);
 ?>
 
 <!DOCTYPE html>

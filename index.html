@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>クイズ</title>
+    <link rel="stylesheet" href="css\style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<body>
+    <header>
+        <h1>猫クイズ</h1>
+        <img src="img/animal_quiz_neko_maru.png" alt="正解の札を上げている猫">
+        <img src="img/animal_quiz_neko_batsu.png" alt="不正解の札を上げている猫">
+    </header>
+    <main>
+
+        <div class="box">
+            <form action="check.php" method="get">
+                <h3>第1問</h3>
+                <p>猫は一生のうちどのくらい眠るでしょうか</p>
+                <label><input type="radio" name="question1" id="Checkbox1" class="checkBoxes" value="radio1">40%</label><br>
+                <label><input type="radio" name="question1" id="Checkbox2" class="checkBoxes" value="radio2">60%</label><br>
+                <label><input type="radio" name="question1" id="Checkbox3" class="checkBoxes" value="radio3">70%</label><br>
+
+                <h3>第2問</h3>
+                <p>猫に与えるとマタタビと同じ効果がある果物はなんでしょう</p>
+                <label><input type="radio" name="question2" id="Checkbox4" class="checkBoxes" value="radio4">キウイ</label><br>
+                <label><input type="radio" name="question2" id="Checkbox5" class="checkBoxes" value="radio5">ザクロ</label><br>
+                <label><input type="radio" name="question2" id="Checkbox6" class="checkBoxes" value="radio6">ライチ</label><br>
+
+                <h3>第3問</h3>
+                <p>猫が感じない味はなんでしょう</p>
+                <label><input type="radio" name="question3" id="Checkbox7" class="checkBoxes" value="radio7">苦味</label><br>
+                <label><input type="radio" name="question3" id="Checkbox8" class="checkBoxes" value="radio8">辛味</label><br>
+                <label><input type="radio" name="question3" id="Checkbox9" class="checkBoxes" value="radio9">甘み</label><br>
+
+                <h3>第4問</h3>
+                <p>猫には人間の指紋のように一匹ずつ違う場所があります、それはどこでしょう</p>
+                <label><input type="radio" name="question4" id="Checkbox10" class="checkBoxes" value="radio10">鼻</label><br>
+                <label><input type="radio" name="question4" id="Checkbox11" class="checkBoxes" value="radio11">肉球</label><br>
+                <label><input type="radio" name="question4" id="Checkbox12" class="checkBoxes" value="radio12">爪</label><br>
+
+                <h3>第5問</h3>
+                <p>猫はいつ活動的になるでしょう</p>
+                <label><input type="radio" name="question5" id="Checkbox13" class="checkBoxes" value="radio13">早朝</label><br>
+                <label><input type="radio" name="question5" id="Checkbox14" class="checkBoxes" value="radio14">夕暮れ</label><br>
+                <label><input type="radio" name="question5" id="Checkbox15" class="checkBoxes" value="radio15">深夜</label><br>
+
+                <div class="container">
+                    <input type="submit" id="submitBotton" class="btn-push" value="PUSH">
+                </div>
+                <!--すべてチェックされてるかjQueryで判定-->
+                <!--解答部分はPHPで判定してページ遷移後◯✗をつける-->
+                <span id="text"></span>
+                <span id="comment"></span>
+            </form>
+        </div>
+
+        <!--解答後のコメントを以下に出力-->
+        <div id="comment"></div>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+<script src="js/jQuery.js"></script>
+<script src="js/check.js"></script>
+<noscript>JavaScriptが利用できません。</noscript>
+
+</html>
